@@ -1,0 +1,211 @@
+*
+{
+    background     : transparent;
+    line-height    : inherit;
+    font-family    : inherit;
+    vertical-align : top;
+    font-size      : 100%;
+    padding        : 0;
+    outline        : 0;
+    margin         : 0;
+    border         : 0;
+}
+[hidden]
+{
+    display: none;
+}
+hr
+{
+    background-color: rgba(50, 50, 50, .1);
+    margin: 15px 0px 15px 0px;
+    height: 1px;
+}
+[data-button]
+{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    background-color: rgba(50, 100, 150, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 0px 10px 0px 10px;
+    display: inline-block;
+    transition: all .3s;
+    line-height: 30px;
+    cursor: pointer;
+}
+[data-button]:hover
+{
+    background-color: rgba(50, 100, 150, .8);
+}
+.M-10
+{
+    margin: -10px -10px -10px -10px;
+}
+
+html
+{
+    background-color: rgba(240, 245, 250, 1);
+    font-family: Arial;
+    text-align: center;
+    line-height: 20px;
+    font-size:   18px;
+}
+html > body
+{
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(200, 210, 220, 1);
+    padding: 15px 15px 15px 15px;
+    margin:  10px 10px 10px 10px;
+    display: inline-block;
+    text-align: left;
+    width: 600px;
+}
+
+a
+{
+    color: rgba(50, 100, 150, 1);
+    text-decoration: underline;
+    transition: all .3s;
+}
+a:hover
+{
+    color: rgba(0, 50, 100, 1);
+    text-decoration: underline;
+}
+
+/*
+>> Книжка
+*/
+main > ul > li
+{
+    background-color: rgba(240, 245, 250, 1);
+    padding: 10px 10px 10px 40px;
+    margin: 0px 0px 5px 0px;
+    position: relative;
+    line-height: 25px;
+    list-style: none;
+}
+main > ul > li > i
+{
+    line-height: 25px !important;
+    font-size:   20px !important;
+    color: rgba(250, 150, 50, 1);
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    height: 25px;
+    width:  25px;
+    left: 10px;
+    top:  10px;
+}
+main > ul > li > u
+{
+    background-color: rgba(255, 255, 255, 1);
+    margin: 0px 10px 0px 0px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 25px;
+    font-size:   13px;
+    float: left;
+    width: 75px;
+}
+main > ul > li > p
+{
+    display: none;
+}
+main > ul > li > p.show
+{
+    margin: 10px 0px 0px 0px;
+    color: rgba(0, 0, 0, .8);
+    line-height: 15px;
+    font-size:   13px;
+    display: block;
+}
+main > ul > li > span
+{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
+main > ul > li > span:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+main > ul > li > a
+{
+    background-color: rgba(255, 255, 255 , .5);
+    line-height: 25px !important;
+    font-size:   20px !important;
+    margin: -5px -5px -5px 10px;
+    padding: 5px 5px 5px 5px;
+    color: rgba(0, 0, 0, .5);
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 50px;
+    transition: all .3s;
+    text-align: center;
+    float: right;
+    height: 25px;
+    width:  25px;
+}
+main > ul > li > a:hover
+{
+    background-color: rgba(50, 100, 150, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+}
+
+/*
+>> Форма
+*/
+form label
+{
+    background-color: rgba(240, 245, 250, .5);
+    padding: 10px 10px 10px 40px;
+    margin:  10px 0px 10px 0px;
+    transition: all .3s;
+    position: relative;
+    line-height: 20px;
+    display: block;
+}
+form label:hover
+{
+    background-color: rgba(240, 245, 250, 1);
+}
+form label > input
+{
+    position: absolute;
+    height: 20px;
+    width:  20px;
+    left: 10px;
+    top:  10px;
+}
+form table
+{
+    border-collapse: separate;
+    border-spacing: 10px;
+    table-layout: fixed;
+    width: 100%;
+}
+form table td.i
+{
+    padding: 0px 0px 0px 20px;
+}
+form table td.i > input,
+form table td.i > textarea
+{
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .5) inset;
+    padding: 5px 10px 5px 10px;
+    margin: 0px 0px 0px -20px;
+    transition: all .3s;
+    border-radius: 3px;
+    line-height: 20px;
+    height: 20px;
+    resize: none;
+    width: 100%;
+}
+form table td.i > input:focus,
+form table td.i > textarea:focus
+{
+    background-color: rgba(200, 200, 0, .1);
+}

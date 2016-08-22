@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Записная книжка для Talaka.by</title>
+
+    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="notebook.css" />
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/js-cookie/src/js.cookie.js"></script>
+    <script type="text/javascript" src="notebook.js"></script>
+</head>
+<body>
+    <main hidden>
+        <div class="empty" hidden>
+            <p>У вас пока нет созданных заметок.</p>
+            <p>Вы <a href="#" onclick="return Notebook.Clear();">можете сменить</a> механизм сохранения записей</p>
+        </div>
+        <ul hidden></ul>
+        <hr />
+        <input data-button type="button" value="Создать заметку" onclick="Notebook.Edit(-1);">
+    </main>
+
+    <form name="edit" onsubmit="return false;" hidden>
+        <input type="hidden" name="id" value="0">
+        <div class="M-10">
+            <table>
+                <tr>
+                    <td>Название заметки:</td>
+                    <td colspan="2" class="i"><input type="text" name="title" value="" placeholder="укажите название заметки"></td>
+                </tr>
+                <tr>
+                    <td>Описание заметки:</td>
+                    <td colspan="2" class="i"><textarea name="description" style="height: 120px;" placeholder="укажите описание заметки"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <label>
+                            <input type="checkbox" name="important" value="1">
+                            <span>это очень важная заметка</span>
+                        </label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr />
+        <input data-button type="submit" value="Вернуться к списку">
+    </form>
+
+    <form name="init" hidden>
+        <p>Записная книжка для задания проекта Talaka.by.</p>
+        <p>Пожалуйста, выберите место, для хранения данных:</p>
+        <label>
+            <input type="radio" name="type" value="1">
+            <span>Сохранение данных на стороне клиента</span>
+        </label>
+        <label>
+            <input type="radio" name="type" value="2">
+            <span>Сохранение данных на стороне сервера</span>
+        </label>
+        <hr />
+        <input data-button type="submit" value="Продолжить">
+    </form>
+    <script>
+        Notebook.Init();
+    </script>
+</body>
+</html>
